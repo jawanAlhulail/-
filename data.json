@@ -62,28 +62,28 @@
   ],
   "array3": [
     {
-      "name": "tomato100",
+      "name": "tomato10",
       "age": 2019,
       "gender": "block 27",
       "location": "bayan",
       "image": "/images/farm-house3.webp"
     },
     {
-      "name": "tomato190",
+      "name": "tomato19",
       "age": 2017,
       "gender": "block 97",
       "location": "bayan",
       "image": "/images/farm-house3.webp"
     },
     {
-      "name": "tomato187",
+      "name": "tomato17",
       "age": 2008,
       "gender": "block 3",
       "location": "bayan",
       "image": "/images/farm-house3.webp"
     },
     {
-      "name": "tomato999",
+      "name": "tomato99",
       "age": 2006,
       "gender": "block 11",
       "location": "bayan",
