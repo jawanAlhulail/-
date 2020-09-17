@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="farms">
+      <div class="container">
+        <div class="con">
+          <img src="./images/redMEE6" width="100" />
+          <h1>jawan for tomatoes</h1>
+          <a href="./index.html"> <button>Home</button></a>
+        </div>
+      </div>
+    </section>
+    <section id="map">
+      <hr style="color: red" />
+      <div class="container">
+        <div class="mapdiv">
+          <img src="./images/tomato-map.png" />
+          <hr style="color: red" />
+          <h3>
+            The TomatoFest Heirloom Tomato Seed Collections are an easy and
+            practical way to introduce yourself to a wonderful selection of
+            heirloom tomatoes...and they make the perfect gift. Consider giving
+            a gift of a TomatoFest Heirloom Tomato Seed Collection for a
+            gardener friend or family member for any holiday, special occasion
+            (birthday, Valentines Day, Mother's Day, Father's Day, Christmas,
+            Hanukkah) or just to recognize another that you appreciate someone
+            and their love of gardening. Or purchase a tomato seed collection
+            for a local school garden or community garden project. Send a
+            message that you appreciate the significance of planting a seed
+            ...Every Seed A Possibility.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <br />
+    <hr />
+    <br />
+    <section id="search">
+      <div class="container">
+        <h1>find the nearest tomato</h1>
+        <p>
+          Enter your area and we will offer you the nearest tomato shop for you
+        </p>
+        <form action="#" class="meetYourMatchــform">
+          <div class="form-group">
+            <input type="text" placeholder="Enter  your " id="area" />
+            <button class="button-is-primary" type="submit">search</button>
+          </div>
+        </form>
+     
+      <div class="widgets is-searchResults">
+        <div class="widget">
+          <div class="widget__image">
+            <img src="./images/farm-house.jpg" alt="pet image" width="200" />
+          </div>
+          <div class="widget__desc">
+            <h4>Rocco</h4>
+            <p>Male | Young</p>
+            <p>Los Angeles CA</p>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget__image">
+            <img src="./images/farm-house.jpg" alt="pet image" width="200" />
+          </div>
+          <div class="widget__desc">
+            <h4>Chanona</h4>
+            <p>Male | Young</p>
+            <p>Los Angeles CA</p>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget__image">
+            <img src="./images/farm-house.jpg" alt="pet image" width="200"/>
+          </div>
+          <div class="widget__desc">
+            <h4>Morio</h4>
+            <p>Male | Young</p>
+            <p>Los Angeles CA</p>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget__image">
+            <img src="./images/farm-house.jpg" alt="pet image" width="200"/>
+          </div>
+          <div class="widget__desc">
+            <h4>danio</h4>
+            <p>Male | Young</p>
+            <p>Los Angeles CA</p>
+          </div>
+        </div>
+       </div>
+    </section>
+    <footer>
+      <img src="./images/redMEE6" width="100px">
+      <div class="icon">
+        <a href="https://twitter.com/AlhulailJawan?s=09" class="twitter"><i class="bx bxl-twitter"></i></a>
+        
+        <a href="https://www.instagram.com/aratanibaki/" class="instagram"><i class="bx bxl-instagram"></i></a>
+       
+      </div>
+      <p>jawan is the creator of this cute website</p>
+      <h4>contact our manager Moudhi : 99988337</h4>
+    </footer>
+
+    <script>
+
+      let widgets = document.querySelector(".widgets");
+if (widgets.classList.contains("is-searchResults")) {
+  widgets.innerHTML = null;
+}
+
+document
+  .querySelector(".button-is-primary")
+  .addEventListener("click", function () {
+    event.preventDefault();
+    fetch("./data.json", {
+      mode: "no-cors",
+      headers: {
+        "Application-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (document.getElementById("area").value == "salwa") {
+          document.querySelector(".widgets").innerHTML = null;
+          res.array1.map((item) => {
+            if (item.location == document.getElementById("area").value) {
+              let widgetdiv = document.createElement("div");
+              widgetdiv.classList += "widget";
+              let imagediv = document.createElement("div");
+              imagediv.classList += "widget__image";
+              let image = document.createElement("img");
+              image.src = item.image;
+              imagediv.appendChild(image);
+              widgetdiv.appendChild(imagediv);
+              let widgetdesc = document.createElement("div");
+              widgetdesc.classList += "widget__desc";
+              let widgetitle = document.createElement("h1");
+              widgetitle.innerHTML = `${item.name}`;
+              let widgetage = document.createElement("p");
+              widgetage.innerHTML = `${
+                item.age + " " + "|" + " " + item.gender
+              }`;
+              let widgetcity = document.createElement("p");
+              widgetcity.innerHTML = `${item.location}`;
+              widgetdesc.appendChild(widgetitle);
+              widgetdesc.appendChild(widgetage);
+              widgetdesc.appendChild(widgetcity);
+              widgetdiv.appendChild(widgetdesc);
+              widgets.appendChild(widgetdiv);
+            }
+          });
+        } else if (document.getElementById("area").value == "mishref") {
+          document.querySelector(".widgets").innerHTML = null;
+          res.array2.map((item) => {
+            if (item.location == document.getElementById("area").value) {
+              let widgetdiv = document.createElement("div");
+              widgetdiv.classList += "widget";
+              let imagediv = document.createElement("div");
+              imagediv.classList += "widget__image";
+              let image = document.createElement("img");
+              image.src = item.image;
+              imagediv.appendChild(image);
+              widgetdiv.appendChild(imagediv);
+              let widgetdesc = document.createElement("div");
+              widgetdesc.classList += "widget__desc";
+              let widgetitle = document.createElement("h1");
+              widgetitle.innerHTML = `${item.name}`;
+              let widgetage = document.createElement("p");
+              widgetage.innerHTML = `${
+                item.age + " " + "|" + " " + item.gender
+              }`;
+              let widgetcity = document.createElement("p");
+              widgetcity.innerHTML = `${item.location}`;
+              widgetdesc.appendChild(widgetitle);
+              widgetdesc.appendChild(widgetage);
+              widgetdesc.appendChild(widgetcity);
+              widgetdiv.appendChild(widgetdesc);
+              widgets.appendChild(widgetdiv);
+            }
+          });
+        } else if (document.getElementById("area").value == "bayan") {
+          document.querySelector(".widgets").innerHTML = null;
+          res.array3.map((item) => {
+            if (item.location == document.getElementById("area").value) {
+              let widgetdiv = document.createElement("div");
+              widgetdiv.classList += "widget";
+              let imagediv = document.createElement("div");
+              imagediv.classList += "widget__image";
+              let image = document.createElement("img");
+              image.src = item.image;
+              imagediv.appendChild(image);
+              widgetdiv.appendChild(imagediv);
+              let widgetdesc = document.createElement("div");
+              widgetdesc.classList += "widget__desc";
+              let widgetitle = document.createElement("h1");
+              widgetitle.innerHTML = `${item.name}`;
+              let widgetage = document.createElement("p");
+              widgetage.innerHTML = `${
+                item.age + " " + "|" + " " + item.gender
+              }`;
+              let widgetcity = document.createElement("p");
+              widgetcity.innerHTML = `${item.location}`;
+              widgetdesc.appendChild(widgetitle);
+              widgetdesc.appendChild(widgetage);
+              widgetdesc.appendChild(widgetcity);
+              widgetdiv.appendChild(widgetdesc);
+              widgets.appendChild(widgetdiv);
+            }
+          });
+        
+        } else {
+          document.querySelector(
+            ".widgets"
+          ).innerHTML = `<h1>no results found</h1>`;
+        }
+      })
+      .catch((err) => console.log(err));
+  });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "array1": [
+    {
+      "name": "potato tomato",
+      "age": 2016,
+      "gender": "block 1",
+      "location": "salwa",
+      "image": "/images/farm-house.jpg"
+    },
+    {
+      "name": "potato tomato2",
+      "age": 2014,
+      "gender": "block 5",
+      "location": "salwa",
+      "image": "/images/farm-house.jpg"
+    },
+    {
+      "name": "potato tomato3",
+      "age": 2018,
+      "gender": "block 7",
+      "location": "salwa",
+      "image": "/images/farm-house.jpg"
+    },
+    {
+      "name": "potato tomato4",
+      "age": 2019,
+      "gender": "block 9",
+      "location": "salwa",
+      "image": "/images/farm-house.jpg"
+    }
+  ],
+
+  "array2": [
+    {
+      "name": "potato tomato5",
+      "age": 2012,
+      "gender": "block 5",
+      "location": "mishref",
+      "image": "/images/farm-house2.jpg"
+    },
+    {
+      "name": "potato tomato75",
+      "age": 2016,
+      "gender": "block 59",
+      "location": "mishref",
+      "image": "/images/farm-house2.jpg"
+    },
+    {
+      "name": "potato tomato78",
+      "age": 2086,
+      "gender": "block 59",
+      "location": "mishref",
+      "image": "/images/farm-house2.jpg"
+    },
+    {
+      "name": "potato tomato8",
+      "age": 2027,
+      "gender": "block 15",
+      "location": "mishref",
+      "image": "/images/farm-house2.jpg"
+    }
+  ],
+  "array3": [
+    {
+      "name": "tomato100",
+      "age": 2019,
+      "gender": "block 27",
+      "location": "bayan",
+      "image": "/images/farm-house3.webp"
+    },
+    {
+      "name": "tomato190",
+      "age": 2017,
+      "gender": "block 97",
+      "location": "bayan",
+      "image": "/images/farm-house3.webp"
+    },
+    {
+      "name": "tomato187",
+      "age": 2008,
+      "gender": "block 3",
+      "location": "bayan",
+      "image": "/images/farm-house3.webp"
+    },
+    {
+      "name": "tomato999",
+      "age": 2006,
+      "gender": "block 11",
+      "location": "bayan",
+      "image": "/images/farm-house3.webp"
+    }
+  ]
+}
